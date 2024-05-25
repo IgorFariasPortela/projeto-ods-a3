@@ -1,0 +1,21 @@
+:root {
+    background-color: #c9f0cf;
+    font-family: 'Segoe UI', Verdana, sans-serif; 
+}
+
+a {
+    text-decoration: none;
+}
+
+.ss-font-color{
+    color: #25e832;
+}
+
+.btn-ss{
+    background-color: #25e88d;
+    cursor: pointer;
+}
+
+i{
+    color: darkgrey;
+}

@@ -1,0 +1,91 @@
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logo > img {
+    height: 100px;
+    max-width: 100%;
+}
+
+.container{
+    width: 80%;
+    max-width: 650px;
+    height: 70vh;
+    max-height: 450px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 2%;
+    background-color: white;
+    box-shadow: 2px 2px 8px 0px #a3a3a3;
+}
+
+.fields {
+    margin: 5% 10%;
+}
+
+.google-letters > span:nth-of-type(1) {color: rgb(39, 111, 255);} /*G*/
+.google-letters > span:nth-of-type(2) {color: rgb(247, 45, 38);} /*O*/
+.google-letters > span:nth-of-type(3) {color: rgb(248, 200, 43);} /*O*/
+.google-letters > span:nth-of-type(4) {color: rgb(39, 111, 255);} /*G*/
+.google-letters > span:nth-of-type(5) {color: rgb(20, 135, 20);} /*L*/
+.google-letters > span:nth-of-type(6) {color: rgb(247, 45, 38);} /*E*/
+
+.fields__title{
+    display: flex;
+    justify-content: center;
+}
+
+#field__title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5%;
+    margin-top: 20px;
+}
+
+.fields__textboxs{
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.fields__textboxs > input{
+    height: 40px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding-left: 7px;
+}
+
+.fields__remember{
+    margin-bottom: 20px;
+}
+
+#btnlogin{
+    width: 100%;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.fields__recovery{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20%;
+    font-size: 13px;
+}
+
+.fields__recovery > a{
+    color: rgb(121, 121, 121);
+}
+
+.fields__create{
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: bold;
+}
