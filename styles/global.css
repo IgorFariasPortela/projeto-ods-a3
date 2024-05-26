@@ -1,8 +1,17 @@
 :root {
-    background-color: #c9f0cf;
+    background-color: var(--bg-color);
     font-family: 'Segoe UI', Verdana, sans-serif; 
-}
 
+    --interactive-objects-color:  #3992ff;
+    --animation-objects-color: #000;
+    --text-color: #0d0f36;
+    --animation-text-color: #fff;
+    --bg-color: #fff;    
+    --bg-banner-color: #294380;
+}
+    .dark-mode:root {
+        --bg-color: ;
+    }
 a {
     text-decoration: none;
 }
