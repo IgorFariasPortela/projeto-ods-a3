@@ -2,7 +2,7 @@
  Projeto ODS da ONU para a faculdade São Judas Campus Unimonte (CSJT)
 [clique aqui para abrir a plataforma online](https://felipecostamartins.github.io/projeto-ods-a3/)!
 
-![Logo Krow](imgs/light-Krow-index-logo.png.png)
+![Logo Krow](imgs/light-Krow-index-logo.png)
 
 ### 🌎 O que são os ODS?
   Os Objetivos de Desenvolvimento Sustentável (ODS) são 17 objetivos ambiciosos e interligados e 169 metas de ação global, para alcançar até o ano de 2030, que tratam dos principais desafios de desenvolvimento enfrentados pelas pessoas, no Brasil e no mundo.
