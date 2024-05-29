@@ -1,91 +1,221 @@
-.logo{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(229, 229, 229);
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 350px;
+  max-width: 350px;
+  background: #f8f9fd;
+  background: linear-gradient(
+    0deg,
+    rgb(255, 255, 255) 0%,
+    rgb(244, 247, 251) 100%
+  );
+  border-radius: 40px;
+  padding: 25px 35px;
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+  margin: 20px;
 }
 
-.logo > img {
-    height: 100px;
-    max-width: 100%;
+.heading {
+  text-align: center;
+}
+.heading > img {
+  width: 120px;
 }
 
-.container{
-    width: 80%;
-    max-width: 650px;
-    height: 70vh;
-    max-height: 450px;
-    border-radius: 20px;
-    margin: auto;
-    margin-top: 2%;
-    background-color: white;
-    box-shadow: 2px 2px 8px 0px #a3a3a3;
+.form {
+  margin-top: 20px;
 }
 
-.fields {
-    margin: 5% 10%;
+.form .forgot-password {
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
-.google-letters > span:nth-of-type(1) {color: rgb(39, 111, 255);} /*G*/
-.google-letters > span:nth-of-type(2) {color: rgb(247, 45, 38);} /*O*/
-.google-letters > span:nth-of-type(3) {color: rgb(248, 200, 43);} /*O*/
-.google-letters > span:nth-of-type(4) {color: rgb(39, 111, 255);} /*G*/
-.google-letters > span:nth-of-type(5) {color: rgb(20, 135, 20);} /*L*/
-.google-letters > span:nth-of-type(6) {color: rgb(247, 45, 38);} /*E*/
-
-.fields__title{
-    display: flex;
-    justify-content: center;
+.form .forgot-password a {
+  font-size: 11px;
+  color: #0099ff;
+  text-decoration: none;
 }
 
-#field__title {
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 5%;
-    margin-top: 20px;
+.form .login-button {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    rgb(16, 137, 211) 0%,
+    rgb(18, 177, 209) 100%
+  );
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
 }
 
-.fields__textboxs{
-    height: 100px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.form .login-button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
 }
 
-.fields__textboxs > input{
-    height: 40px;
-    border: 1px solid silver;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding-left: 7px;
+.form .login-button:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
 }
 
-.fields__remember{
-    margin-bottom: 20px;
+.agreement {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
 }
 
-#btnlogin{
-    width: 100%;
-    border: none;
-    color: #FFFFFF;
-    padding: 10px;
-    border-radius: 10px;
+.agreement a {
+  text-decoration: none;
+  color: #0099ff;
+  font-size: 9px;
 }
 
-.fields__recovery{
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20%;
-    font-size: 13px;
+/* estilos para caixas de email e senha */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.fields__recovery > a{
-    color: rgb(121, 121, 121);
+.form-input {
+  color: #003688;
+  background: transparent;
+  border: 1px solid #4891ff;
+  border-radius: 5px;
+  padding: 8px;
+  outline: none;
+  width: 100%;
 }
 
-.fields__create{
-    display: flex;
-    justify-content: center;
-    font-size: 17px;
-    font-weight: bold;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #4891ff;
+  position: relative;
+  width: 100%;
+}
+
+.form-group label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 10px;
+  background: #ffffff;
+  padding: 0 5px;
+  color: #83b4ff;
+  font-size: 12px;
+}
+
+.form-group input:placeholder-shown ~ label {
+  top: 4px;
+  left: 10px;
+  background: none;
+  color: #7ca1da;
+  font-size: 14px;
+}
+
+/* -----------------estilos para a checkbox */
+.checkbox-wrapper-46 input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-46 .cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.checkbox-wrapper-46 .cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #9098a9;
+  transition: all 0.2s ease;
+}
+.checkbox-wrapper-46 .cbx span:first-child svg {
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #506eec;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+.checkbox-wrapper-46 .cbx span:last-child {
+  padding-left: 8px;
+}
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+  border-color: #506eec;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+  background: #506eec;
+  border-color: #506eec;
+  animation: wave-46 0.4s ease;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(3.5);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes wave-46 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+#remember-login {
+  font-size: 13px;
+  color: grey;
 }

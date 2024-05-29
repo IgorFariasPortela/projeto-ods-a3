@@ -1,5 +1,11 @@
+/* -----RESET----- */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/* -------------------- */
 :root {
-    background-color: var(--bg-color);
     font-family: 'Segoe UI', Verdana, sans-serif; 
 
     --interactive-objects-color:  #3992ff;
