@@ -1,0 +1,70 @@
+@media screen and (max-width: 820px) {
+    .beginning-page{
+        flex-direction: column;
+        margin: 0px 10px 30px 10px;
+    }
+
+    .beginning-page > img{
+        width: 350px;
+        height: 350px;
+        margin: auto;
+    }
+
+    .beginning-page > p{
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 730px) {
+
+    .cards {
+        flex-direction: column;
+        margin: auto;
+    }
+    .card {
+        margin: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .end-page {
+        flex-direction: column;
+    }
+    .end-page > iframe{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .end-page > iframe{
+        width: 95%;
+    }
+
+    header > img {
+        width: 75px;
+        height: 35px;
+      }
+
+    header > ul > li {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    header > img {
+        visibility: hidden;
+        display: none;
+    }
+    .beginning-page > img{
+        width: 150px;
+        height: 150px;
+    }
+    .card{
+        width: 93%;
+    }
+    .end-page > iframe{
+        width: 93%;
+        height: 270px;
+    }
+}

@@ -3,10 +3,17 @@ body{
 }
 
 /* BARRA DE NAVEGAÇÃO==============================================================*/
+nav {
+  display: flex;
+  justify-content: center ;
+  margin: auto;
+}
 header {
   display: flex;
   justify-content: space-between;
   margin: 0vw 10vw;
+  width: 80%;
+  max-width: 970px;
 }
 
 header > img {
@@ -49,16 +56,19 @@ a:hover{
 /* -----INICIO------- */
 .beginning-page {
   display: flex;
+  justify-content: center;
 }
 
 .beginning-page > img {
   width: 500px;
+  height: 500px;
 }
 
 .beginning-page > p {
   color: var(--text-color);
   font-size: 14px;
   margin: 100px 90px 10px 0px;
+  max-width: 500px;
 }
 
 .beginning-page > p > a {

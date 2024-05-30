@@ -219,3 +219,12 @@ body {
   font-size: 13px;
   color: grey;
 }
+
+.create-account{
+  font-size: 10px;
+  font-weight: bolder;
+}
+
+.create-account > a{
+  color: lightgrey;
+}
