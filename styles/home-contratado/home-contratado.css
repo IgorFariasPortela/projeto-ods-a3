@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(238, 240, 243);
+}
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+header > img {
+    width: 100px;
+}  
+
+.perfil-usuario{
+    display: flex;
+    margin: 7px;
+}
+.perfil-usuario > img {
+    height: 30px;
+    margin-right: 4px;
+}
+.perfil-usuario > p {
+    margin: 2px;
+}
+
+/* content-home-contratado */
+
+nav {
+    background-color: white;
+
+}
+
+main {
+    background-color: white;
+    border-radius: 10px;
+    
+    margin: 12px;
+    height: 100vh;
+    width: 100vw;
+}
+
+#content-home-contratado {
+    display: flex;
+}
