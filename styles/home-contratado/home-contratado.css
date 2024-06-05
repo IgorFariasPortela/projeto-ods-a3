@@ -22,11 +22,30 @@ header > img {
     margin: 2px;
 }
 
-/* content-home-contratado */
+/* barra lateral de categorias */
 
 nav {
     background-color: white;
+}
+nav > h3 {
+    margin: 10px 0px;
+    font-size: 14px;
+    margin: 35px 0px 0px 14px;
+}
 
+ul{
+    border: 1px solid red;
+}
+ul > li{
+    border: 1px solid green;
+    list-style: none;
+}
+ul > li > a{
+    border: 1px solid blue;
+    color: #006392;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 30px;
 }
 
 main {
@@ -41,3 +60,5 @@ main {
 #content-home-contratado {
     display: flex;
 }
+
+/* caixa para o felipe se virar */
