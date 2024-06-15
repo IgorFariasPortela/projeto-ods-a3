@@ -22,10 +22,16 @@ A plataforma visa melhorar e facilitar para pessoas comuns buscarem por outras p
 #### Cadastro interface
 ![Texto alternativo](imgs/prints-interface/print-singup.jpg)
 #### Perfil interface
-![Texto alternativo](imgs/prints-interface/print-perfil.jpg.)
+![Texto alternativo](imgs/prints-interface/print-perfil.jpg)
 #### Prestador interface
-![Texto alternativo](imgs/prints-interface/print-prestador.jpg.)
+![Texto alternativo](imgs/prints-interface/print-prestador.jpg)
 #### Contratante interface
 ![Texto alternativo](imgs/prints-interface/print-contratante.jpg)
 ### Barra de categoria dos serviços
 ![Texto alternativo](imgs/prints-interface/print-categorias.jpg)
+
+Integrantes do grupo:
+- Felipe Costa Martins - 52412779
+- Adilson de Sousa santos - 52414629
+- Leandro Bispo Cruz - 52410771
+- Igor Farias Portela - 824135535
