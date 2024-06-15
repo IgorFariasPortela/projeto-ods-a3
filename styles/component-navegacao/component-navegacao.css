@@ -1,0 +1,179 @@
+/* Cabeçalho da pagina */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+header > img {
+    width: 100px;
+}  
+
+.perfil-usuario{
+    display: flex;
+    margin: 7px;
+}
+.perfil-usuario > img {
+    height: 30px;
+    margin-right: 4px;
+}
+.perfil-usuario > p {
+    margin: 2px;
+}
+
+#content-home-contratado {
+    display: flex;
+}
+
+/* barra de atividades */
+
+.activity-bar {
+  width: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0px 0px 10px 0px;
+}
+.activity-icons > a > img {
+  width: 25px;
+  margin: 5px;
+  transition: .5s;
+}
+.activity-icons > a > img:hover {
+  transform: scale(1.25);
+}
+
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+  margin: 5px 5px 15px 5px;
+}
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign svg {
+  width: 10px;
+}
+.sign svg path {
+  fill: white;
+}
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+
+/* barra lateral de categorias */
+nav {
+    background-color: white;
+    width: 180px;
+    height: 94.5vh;
+}
+nav > h3 {
+    font-size: 14px;
+    margin: 7px 0px 5px 14px;
+}
+
+ul > li{
+    list-style: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    transition: 0.3s;
+}
+
+ul > li:hover{
+    background-color: #e7e7e7;
+    color: white;
+}
+ul > li > a{
+    color: #006392;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+/* estilização para a barra de categorias ficar invisivel ate ser clicado no icone */
+
+#category-menu {
+  position: fixed;
+  top: 0;
+  left: -260px; /* Escondido fora da tela à esquerda */
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  transition: left 0.3s ease;
+  z-index: 1000; /* Para sobrepor os outros elementos */
+}
+
+#category-menu.open {
+  left: 0; /* Traz o menu de volta para a tela */
+}
+#category-menu.close{
+  left: -260px;
+}
+
+/* Estilos para o botão de voltar */
+.back-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  margin-bottom: 10px;
+}
+.back-button > img{
+  margin: 10px;
+  width: 25px;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 420px){
+  .perfil-usuario > p {
+    font-size: 85%;
+  }
+}
+@media screen and (max-width: 315px){
+  .perfil-usuario > p{
+    display: none;
+  }
+}

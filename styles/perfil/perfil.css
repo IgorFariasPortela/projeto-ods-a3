@@ -1,0 +1,316 @@
+body{
+  background-color: rgb(232, 235, 240);
+}
+/* *{border: 1px solid red;} */
+
+main{
+  background-color: white;
+  border-radius: 10px;
+  
+  margin: 12px;
+  height: 91vh;
+  width: 100vw;
+
+  display: flex;
+  overflow: hidden;
+
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+/* ============= LADO ESQUERDO ============= */
+.textos > label{
+  color: gray;
+}
+.textos > h1 {
+  width: 100%;
+  background: linear-gradient(to right, rgb(104, 104, 253) , rgb(156, 171, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+}
+/* Cards Redes Sociais */
+.card {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 7px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+.socialContainer {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerTwo:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerThree:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Cards de Experiencia */
+.experiencia{
+  margin-top: 15px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  white-space: nowrap;
+}
+.experiencia::-webkit-scrollbar {
+  width: 0px;
+}
+.xp{
+  background-color: rgba(0, 0, 0, 0.073);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 30%;
+  cursor: grab;
+  user-select: none;
+}
+.xp:active{
+  cursor:grabbing;
+}
+#text1{
+  color:  rgb(57, 145, 253);
+  font-weight: bold;
+}
+#text2{
+  color:rgb(104, 104, 104);
+}
+/* ============= LADO DIREITO ============= */
+.direito{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+}
+.direito > img{
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+}
+
+.Btn-edit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  height: 40px;
+  border: none;
+  padding: 0px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px black;
+  transition-duration: 0.3s;
+  margin: 10px;
+}
+
+.svg {
+  width: 13px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: 0.3s;
+}
+
+.Btn-edit:hover {
+  color: transparent;
+}
+
+.Btn-edit:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.Btn-edit:active {
+  transform: translate(3px, 3px);
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 0px white;
+}
+
+/* ============= FORMULARIO DE EDIÇÃO PERFIL ============= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 400px;
+  animation: slide-down 0.5s ease-out;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* botao de fechar formulario */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* EDIÇÃO DO FORMULARIO */
+.form {
+  --width-of-input: 200px;
+  --border-height: 1px;
+  --border-before-color: rgba(221, 221, 221, 0.39);
+  --border-after-color: #5891ff;
+  --input-hovered-color: #4985e01f;
+  position: relative;
+  width: var(--width-of-input);
+  margin-bottom: 10px;
+}
+.input {
+  color: gray;
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+}
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+input:focus {
+  outline: none;
+}
+input:focus ~ .input-border {
+  width: 100%;
+}
+ /* FORMULARIO DE EDIÇÃO */
+ #formularioEdicao{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+  .formulario-edicao {
+    display: none;
+  }
+  /* LOGIN BUTTON = SALVAR */
+  .login-button {
+    display: block;
+    width: 50%;
+    font-weight: bold;
+    background: linear-gradient(
+    45deg,
+    rgb(16, 137, 211) 0%,
+    rgb(18, 177, 209) 100%
+  );
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.login-button:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+}

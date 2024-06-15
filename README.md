@@ -11,7 +11,9 @@
 
 Desenvolvemos uma plataforma chamada "Krow" para atender a ODS n° 8 (Trabalho decente e crescimento econômico: promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo, e trabalho decente para todos.)
 
-A plataforma visa melhorar e facilitar a busca e contratação de artistas independentes e algumas categorias de freelancers com pequenos estabelecimentos e restaurantes da cidade de Santos-SP.
+Você mora em Santos-SP e já precisou procurar por alguém para cantar em uma noite no seu pequeno estabelecimento ou alguém para prestar um serviço doméstico na sua casa mas não tinha nenhuma indicação de alguém?
+
+A plataforma visa melhorar e facilitar para pessoas comuns buscarem por outras pessoas dispostas a realizar os seus serviços demandados.
 
 #### Index interface
 ![Texto alternativo](imgs/prints-interface/print-index.jpg)
@@ -19,3 +21,11 @@ A plataforma visa melhorar e facilitar a busca e contratação de artistas indep
 ![Texto alternativo](imgs/prints-interface/print-login.jpg)
 #### Cadastro interface
 ![Texto alternativo](imgs/prints-interface/print-singup.jpg)
+#### Perfil interface
+![Texto alternativo](imgs/prints-interface/print-perfil.jpg.)
+#### Prestador interface
+![Texto alternativo](imgs/prints-interface/print-prestador.jpg.)
+#### Contratante interface
+![Texto alternativo](imgs/prints-interface/print-contratante.jpg)
+### Barra de categoria dos serviços
+![Texto alternativo](imgs/prints-interface/print-categorias.jpg)

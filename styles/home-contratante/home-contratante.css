@@ -1,50 +1,30 @@
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(45deg, #3498db, #3b759a, rgb(209, 209, 209));
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.1) 1px,
-      transparent 1px
-    ),
-    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
-  pointer-events: none;
+  background-color: rgb(232, 235, 240);
 }
 
 main {
-  width: 90%;
-  height: 90%;
+  margin: 12px;
+  height: 91vh;
+  width: 100vw;
+
   display: flex;
+  overflow-y: scroll;
   justify-content: baseline;
   align-items: start;
-  border-radius: 15px;
-  background: linear-gradient(10deg, #ffffff8c, #ffffff1b);
+  flex-wrap: wrap;
+
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
 }
 
-/* CAIXA DE CRIAR SERVIÇOS */
-
+/* ============== CAIXA DE CRIAR SERVIÇOS ============== */
 .service_creation {
-  background-color: rgba(255, 255, 255, 0.317);
+  background: linear-gradient(to top, rgba(221, 221, 221, 0.466), rgba(255, 255, 255, 0));
   border-radius: 10px;
-  border: 2px solid white;
+  border: 2px solid #d4dbe0;
   margin: 20px;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,37 +33,268 @@ main {
 
 .service_creation:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.06);
+}
+/* ============== CAIXA DE SERVIÇOS CRIADOS ============== */
+.Card_Serviço{
+  border-radius: 10px;
+  margin: 20px;
+  width: 250px;
+  background-color: rgb(235, 237, 241);
+  transition: 0.5s;
+}
+.Card_Serviço:hover{
+  transform: scale(1.06);
+}
+.Image_Profile{
+  border-radius: 10px 10px 0px 0px;
+  height: 100px;
+  background: linear-gradient(to bottom,  #61a9ce, #7974b1);
+  overflow-y: scroll;
+}
+.Image_Profile img{
+  width: 35px;
+  border-radius: 50%;
+  margin: 3px;
+}
+.Texto_Card_Serviço{
+  color: rgb(61, 61, 61);
+  height: 10%;
+  padding: 10px;
+}
+.Texto_Card_Serviço > h2{
+  font-size: 20px;
+}
+.Texto_Card_Serviço > p{
+  font-size: 13px;
+}
+#serv_data{
+  color: grey;
+  font-size: 11px;
+  margin-bottom: 7px;
+}
+/* botão de concluir serviço */
+.animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 7px;
+  margin: 7px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #9c9c9ca0;
+  box-shadow: 0 0 0 2px #ffffff4a;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.services_created {
-  background-color: white;
-  border-radius: 10px;
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #74e220;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 5px #21f34f60;
+  color: #ffffff;
+}
+
+.animated-button:hover span:last-child {
   width: 150px;
   height: 150px;
-  margin: 20px;
-  padding: 7px;
-  color: grey;
-  font-size: 12px;
+  opacity: 1;
 }
 
-.services_created > p {
-  margin-top: 7px;
+
+/* FORMULÁRIO DE CRIAÇÃO DO SERVIÇO */
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+  --width-of-input: 270px;
+  --border-height: 1px;
+  --border-before-color: rgba(221, 221, 221, 0.39);
+  --border-after-color: #5891ff;
+  --input-hovered-color: #4985e01f;
+  position: relative;
+  width: var(--width-of-input);
+  margin: 5px;
+ }
+ .input {
+  color: #000000;
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+ }
+ .input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+ }
+ input[type="text"]:hover {
+  background: var(--input-hovered-color);
+ }
+ 
+ input[type="text"]:focus {
+  outline: none;
+ }
+ input[type="text"]:focus ~ .input-border {
+  width: 100%;
+ }
+
+ 
+ /* estilização */
+ form > img {
+   width: 100px;
+}
+/* DATA E HORA */
+input[type="date"]{ 
+  background-color: #0080ff;
+  padding: 10px;
+  margin: 5px;
+  font-family: "Roboto Mono",monospace; 
+  color: #ffffff; 
+  font-size: 18px; 
+  border: none; 
+  outline: none; 
+  border-radius: 5px;
+  height: 40px;
+} 
+::-webkit-calendar-picker-indicator{
+  background-color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+/* BOTÃO DE RADIO */
+.radio-group {
+  display: flex;
+  flex-direction: row;
 }
 
-/* FORMULÁRIO DO SERVIÇO */
+.radio-label {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.2s, border-color 0.2s;
+  margin: 5px;
+}
 
+.radio-label:hover {
+  background-color: #e6e6e6;
+}
+
+.radio-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-input:checked + .radio-label {
+  background-color: #c3d7ff;
+  border-color: #98b9ff;
+}
+
+.radio-input:focus + .radio-label {
+  outline: 2px solid #538aff;
+}
+
+.radio-inner-circle {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #888;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+.radio-label:hover .radio-inner-circle {
+  border-color: #555;
+}
+
+.radio-input:checked + .radio-label .radio-inner-circle {
+  border-color: #598eff;
+}
+
+.radio-input:checked + .radio-label .radio-inner-circle::after {
+  content: '';
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #417dff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* input de criar serviço */
+.login-button {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.login-button:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+}
 /* animação e posicionamento */
 .modal {
   display: none;
-  position: fixed; /* Fica fixo na tela */
-  z-index: 1; /* Fica no topo */
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Largura total */
-  height: 100%; /* Altura total */
-  overflow: auto; /* Habilita scroll se necessário */
-  background-color: rgba(0, 0, 0, 0.4); /* Fundo preto com opacidade */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
   justify-content: center;
   align-items: center;
   opacity: 0;
@@ -127,13 +338,41 @@ main {
   cursor: pointer;
 }
 
-/* estilização */
-img {
-    width: 100px;
-}
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+  /* Estilos para a notificação de confirmação */
+  .confirm-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .confirm-modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  #confirmYes, #confirmNo {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #7974b1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #confirmYes:hover, #confirmNo:hover {
+    background-color: #5552a4;
+  }

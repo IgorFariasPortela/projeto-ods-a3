@@ -1,0 +1,35 @@
+planilha 
+
+[
+USUÁRIOS:
+-ID (buscas do usuario)
+-Email (entra na conta)
+-Senha (entra na conta)
+
+-Nome
+-Idade
+-Contato
+
+(complementos de perfil:)
+-Redes sociais
+-Gênero
+-Foto
+]
+
+
+SERVIÇOS:
+
+-ID (buscas do serviço)
+
+-Título
+-Objetivo
+
+-Data/Hora
+-Endereço
+-Categorias
+
+
+INTERESSADOS:
+
+-ID do serviço
+-ID do usario
