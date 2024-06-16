@@ -31,7 +31,7 @@ A plataforma visa melhorar e facilitar para pessoas comuns buscarem por outras p
 ![Texto alternativo](imgs/prints-interface/print-categorias.jpg)
 
 Integrantes do grupo:
-- Felipe Costa Martins - 52412779 - Engenharia de Software
-- Adilson de Sousa santos - 52414629 - Engenharia de Software
-- Leandro Bispo Cruz - 52410771 - Jogos digitais
-- Igor Farias Portela - 824135535 - Gestão de T.I.
+- Felipe Costa Martins - 52412779 Engenharia de Software
+- Adilson de Sousa santos - 52414629 Jogos Digitais
+- Leandro Bispo Cruz - 52410771 Engenharia de Software 
+- Igor Farias Portela - 824135535 Gestão de TI

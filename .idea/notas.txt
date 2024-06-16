@@ -1,0 +1,10 @@
+mudar os nomes dos arquivos:
+novologin.php = login.php
+funcionou_contratado = home-contratado
+funcionou_contratante = home-contratante
+
+PEDIR PRO IGOR:
+
+Adicionar um mecanismo que verifica se um serviço já existe um cliente interessado no serviço especifico no banco de dados, caso ja exista não deixar o cliente pressionar o tenho interesse e aparecer um pop up dizendo "serviço já adicionado anteriormente"
+
+Botão de editar perfil só aparecer se for o dono do perfil.
