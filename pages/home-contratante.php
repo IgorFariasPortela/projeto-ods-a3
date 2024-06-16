@@ -3,8 +3,9 @@
 <?php
 session_start();
 
-if(isset($_SESSION['email'])) {
+if(isset($_SESSION['email']) && isset($_SESSION['nome'])) {
   $email_usuario = $_SESSION['email'];
+  $nome_usuario = $_SESSION['nome'];
 } else {
   // Caso não esteja logado, redirecione para a página de login
   header('Location: login.html');
@@ -36,7 +37,7 @@ if(isset($_SESSION['email'])) {
           <a id="category-icon" href="javascript:void(0);"><img src="../imgs/svg/icon-category.svg" alt="Icone de categorias"></a>
           <a href="../pages/home-contratado.php"><img src="../imgs/svg/work-bag.svg" alt="Icone de Prestador de serviço"></a>
           <a href="../pages/home-contratante.php"><img src="../imgs/svg/work-contract.svg" alt="Icone de Contratante de serviço"></a>
-          <a href="perfil.html"><img src="../imgs/svg/icon-profile.svg" alt="Icone de perfil"></a>
+          <a href="../pages/perfil.php"><img src="../imgs/svg/icon-profile.svg" alt="Icone de perfil"></a>
         </div>
 
         <form method="POST" action="../src/backend/loginpaginaanterior.php">

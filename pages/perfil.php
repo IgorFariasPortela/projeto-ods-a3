@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<?php
+session_start();
+
+if(isset($_SESSION['email']) && isset($_SESSION['nome'])) {
+  $email_usuario = $_SESSION['email'];
+  $nome_usuario = $_SESSION['nome'];
+} else {
+  // Caso não esteja logado, redirecione para a página de login
+  header('Location: login.html');
+  exit(); // Encerra o script após redirecionar
+}
+?>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,13 +23,13 @@
     <title>Perfil</title>
   </head>
   <body>
-    <header>
-      <img src="../imgs/Krow-index-logo.png" alt="Krow logo" />
-      <div class="perfil-usuario">
-        <img src="../imgs/icon-user.png" alt="" />
-        <p>noobmaster69@gmail.com</p>
-      </div>
-    </header>
+  <header>
+    <img src="../imgs/Krow-index-logo.png" alt="Krow logo" />
+    <div class="perfil-usuario">
+      <img src="../imgs/icon-user.png" alt="" />
+      <p><?php echo $email_usuario ?></p>
+    </div>
+  </header>
 
     <div id="content-home-contratado">
       <!-- barra lateral de ICONES -->
@@ -29,10 +41,17 @@
           <a href="perfil.html"><img src="../imgs/svg/icon-profile.svg" alt="Icone de perfil"></a>
         </div>
 
-        <button class="Btn">
-          <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+        <form method="POST" action="../src/backend/loginpaginaanterior.php">
+        <input type="hidden" name="redirect" value="<?php echo urlencode($_SERVER['REQUEST_URI']); ?>">
+        <button class="Btn" type="submit" name="sair">
+          <div class="sign">
+            <svg viewBox="0 0 512 512">
+              <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path>
+            </svg>
+          </div>
           <div class="text">Desconectar</div>
         </button>
+      </form>
       </nav>
       
       <!-- barra lateral de CATEGORIAS -->
@@ -63,10 +82,10 @@
       <main>
         <!-- ============= LADO ESQUERDO ============= -->
         <div class="esquerdo">
-          <div class="textos">
-            <label>Olá eu sou</label>
-            <h1>Felipe Costa</h1>
-          </div>
+      <div class="textos">
+        <label>Olá eu sou</label>
+        <h1><?php echo $nome_usuario; ?></h1>
+      </div>
 
           <div class="card">
             <a class="socialContainer containerOne" href="#">
